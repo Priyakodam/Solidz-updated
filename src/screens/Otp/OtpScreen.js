@@ -161,7 +161,7 @@ export default function OTPScreen({ route, navigation }) {
       setIsOTPUsed(true); // Mark OTP as used
       setOtp(["", "", "", "", "", ""]);
       setTimeout(() => {
-        navigation.navigate("QRScreen");
+        navigation.navigate("WelcomeScreen");
       }, 200);
     } else {
       Alert.alert("Error", "Incorrect OTP! Try again.");

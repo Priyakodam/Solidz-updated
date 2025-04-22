@@ -109,8 +109,8 @@ const styles = StyleSheet.create({
     bottom: responsiveHeight(12), 
     alignSelf: "center",
     backgroundColor: "rgba(0,0,0,0.7)",
-    paddingVertical: responsiveHeight(3.5),
-    paddingHorizontal: responsiveWidth(10),
+    paddingVertical: responsiveHeight(1.5),
+    paddingHorizontal: responsiveWidth(2.5),
     borderRadius: 30,
   },
 });

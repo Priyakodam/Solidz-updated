@@ -3,16 +3,17 @@ import { View, TouchableOpacity, Image } from "react-native";
 import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import styles from "./NavStyle";
+import { Alert } from 'react-native';
 import logo from "../Img/solidz_logo_png.png";
 
 const NavScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  const [activeIcon, setActiveIcon] = useState(route.name); 
+  const [activeIcon, setActiveIcon] = useState(route.name);
 
   useFocusEffect(
     React.useCallback(() => {
-      setActiveIcon(route.name); 
+      setActiveIcon(route.name);
     }, [route.name])
   );
 
@@ -24,22 +25,40 @@ const NavScreen = () => {
 
   return (
     <>
-      
+
       <View style={styles.topBar}>
         <Image source={logo} style={styles.logo} />
         <View style={styles.topRightIcons}>
           <TouchableOpacity onPress={() => console.log("Notifications clicked")}>
             <Icon name="bell" size={25} color="#2a2927" />
           </TouchableOpacity>
-          
-          <TouchableOpacity onPress={() => navigation.navigate("Register")}>
-  <Icon name="sign-out" size={32} color="#2a2927" />
-</TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() =>
+              Alert.alert(
+                "Confirm Logout",
+                "Are you sure you want to log out?",
+                [
+                  {
+                    text: "Cancel",
+                    style: "cancel",
+                  },
+                  {
+                    text: "Logout",
+                    onPress: () => navigation.navigate("Register"), // or your logout logic
+                  },
+                ],
+                { cancelable: true }
+              )
+            }
+          >
+            <Icon name="sign-out" size={32} color="#2a2927" />
+          </TouchableOpacity>
 
         </View>
       </View>
 
-     
+
       <View style={styles.glassNavbar}>
         {[
           { name: "QRScreen", icon: "qrcode" },

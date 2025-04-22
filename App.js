@@ -14,6 +14,7 @@ import Video from './src/screens/Video';
 import UploadScreen from "./src/screens/UploadScreen";
 import CameraFunction from "./src/screens/CameraFunction";
 import { UserProvider } from "./src/context/UserContext";
+import WelcomeScreen from "./src/screens/Otp/WelcomeScreen";
 
 const Stack = createStackNavigator();
 
@@ -45,6 +46,14 @@ export default function App() {
         >
           {() => <ScreenWithNav component={QRScreen} />}
         </Stack.Screen>
+
+        <Stack.Screen
+          name="WelcomeScreen"
+          options={{ headerShown: false }}
+        >
+          {() => <ScreenWithNav component={WelcomeScreen} />}
+        </Stack.Screen>
+
 
         <Stack.Screen
           name="Record"
