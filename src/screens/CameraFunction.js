@@ -169,7 +169,7 @@ export default function CameraFunction() {
             width: "100%",
             height: 40,
             position: "absolute",
-            top: "75%",
+            top: "80%",
           }}
           minimumValue={0}
           maximumValue={1}
@@ -236,8 +236,13 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     backgroundColor: "transparent",
-    margin: 20,
+    position: "absolute",
+    bottom: 200,
+    left: 0,
+    right: 0,
+    justifyContent: "center", // Optional: centers buttons horizontally
   },
+  
   shutterContainer: {
     flexDirection: "row",
     justifyContent: "center",

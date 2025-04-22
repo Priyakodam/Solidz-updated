@@ -17,6 +17,10 @@ const NavScreen = () => {
     }, [route.name])
   );
 
+  // useEffect(() => {
+  //   setActiveIcon(route.name);
+  // }, [route.name]);
+
   const handleIconClick = (iconName) => {
     if (route.name !== iconName) {
       navigation.navigate(iconName);
