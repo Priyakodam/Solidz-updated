@@ -125,7 +125,6 @@ const NavScreen = () => {
     }, [route.name])
   );
 
-<<<<<<< HEAD
   useEffect(() => {
     if (loading) {
       Animated.loop(
