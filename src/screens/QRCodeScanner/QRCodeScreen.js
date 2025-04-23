@@ -45,9 +45,10 @@ export default function App() {
 
     if (data.startsWith("http://") || data.startsWith("https://")) {
       Linking.openURL(data);
-    } else {
-      alert(`Scanned Data: ${data}`);
-    }
+    } 
+    // else {
+    //   alert(`Scanned Data: ${data}`);
+    // }
 
     isHandlingScan.current = false;
   };
