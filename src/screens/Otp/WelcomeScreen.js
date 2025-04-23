@@ -5,7 +5,7 @@ import { View, Text, StyleSheet } from "react-native";
 export default function WelcomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.welcomeText}>🎉 Welcome! You have successfully logged in.</Text>
+      <Text style={styles.welcomeText}>Click on Scanner.</Text>
     </View>
   );
 }

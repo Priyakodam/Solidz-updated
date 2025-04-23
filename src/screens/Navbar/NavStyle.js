@@ -71,12 +71,6 @@
 
 
 
-
-
-
-
-
-
 import { StyleSheet } from "react-native";
 import {
   responsiveHeight,
@@ -84,6 +78,17 @@ import {
 } from "react-native-responsive-dimensions";
 
 const styles = StyleSheet.create({
+  loaderContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    zIndex: 1001,
+  },
   topBar: {
     position: "absolute",
     top: 0,
@@ -107,7 +112,7 @@ const styles = StyleSheet.create({
     height: responsiveHeight(15),
     width: responsiveWidth(25),
     resizeMode: "contain",
-    marginTop: responsiveHeight(3.5),
+    marginTop: responsiveHeight(3.5), 
   },
   topRightIcons: {
     flexDirection: "row",
@@ -129,6 +134,7 @@ const styles = StyleSheet.create({
     shadowColor: "#fff",
     shadowOpacity: 0.5,
     shadowRadius: 10,
+    zIndex: 1000,
   },
   iconWrapper: {
     width: responsiveWidth(13),
@@ -140,23 +146,13 @@ const styles = StyleSheet.create({
   activeIconWrapper: {
     backgroundColor: "white",
   },
-  loaderContainer: {
-    flex: 1,
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: "rgba(255, 255, 255, 0.9)",
-    justifyContent: "center",
-    alignItems: "center",
-    zIndex: 9999,
-  },
-  loaderImage: {
-    width: responsiveWidth(20),
-    height: responsiveWidth(20),
-    resizeMode: "contain",
-  },
 });
 
 export default styles;
+
+
+
+
+
+
+
