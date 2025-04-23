@@ -125,6 +125,7 @@ const NavScreen = () => {
     }, [route.name])
   );
 
+<<<<<<< HEAD
   useEffect(() => {
     if (loading) {
       Animated.loop(
@@ -139,6 +140,10 @@ const NavScreen = () => {
       spinAnim.stopAnimation();
     }
   }, [loading]);
+
+  // useEffect(() => {
+  //   setActiveIcon(route.name);
+  // }, [route.name]);
 
   const handleIconClick = (iconName) => {
     if (route.name !== iconName) {
