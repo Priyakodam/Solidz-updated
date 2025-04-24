@@ -187,7 +187,7 @@ export default function App() {
           <Button
             title="Click here to open QRScreen"
             onPress={() => setShowScanner(true)}
-            color="#3B82F6" // Tailwind blue-500
+            color="white" // Tailwind blue-500
           />
         </View>
       ) : (
